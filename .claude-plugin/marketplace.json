@@ -1,0 +1,28 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agent-marketplace",
+  "description": "Agent plugins and skills by Chao Suo. Install a single plugin instead of the whole collection.",
+  "owner": {
+    "name": "Chao Suo",
+    "email": "charlessuo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "productivity",
+      "displayName": "Productivity",
+      "description": "Skills for writing and editing. Includes unslop, which strips AI tells out of prose.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chao Suo",
+        "email": "charlessuo@gmail.com"
+      },
+      "source": "./plugins/productivity",
+      "category": "productivity",
+      "keywords": [
+        "writing",
+        "editing",
+        "style"
+      ]
+    }
+  ]
+}

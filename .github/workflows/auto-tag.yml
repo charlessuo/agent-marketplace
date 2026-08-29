@@ -1,0 +1,116 @@
+name: auto-tag
+
+# Disabled by default. Tagging on push to main only happens once the repository
+# variable ENABLE_AUTO_RELEASE is set to "true"
+# (Settings -> Secrets and variables -> Actions -> Variables).
+# Until then, run this workflow by hand from the Actions tab. Manual runs
+# default to a dry run that reports the plan without creating anything.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/**'
+      - '.claude-plugin/marketplace.json'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Report what would be tagged without creating or pushing tags
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-tag
+  cancel-in-progress: false
+
+jobs:
+  tag:
+    name: Tag bumped plugins
+    runs-on: ubuntu-latest
+    # A manual run is always allowed, since a human asked for it. Automatic
+    # tagging on push waits for the opt-in variable.
+    if: github.event_name == 'workflow_dispatch' || vars.ENABLE_AUTO_RELEASE == 'true'
+    env:
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+    outputs:
+      tags: ${{ steps.create.outputs.tags }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # A bad manifest must never reach a tag, because tags are what the
+      # release workflow builds from and what users install by.
+      - name: Validate before tagging
+        run: python3 scripts/validate_marketplace.py
+
+      - name: Create missing version tags
+        id: create
+        run: |
+          set -euo pipefail
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          created=()
+          while IFS=$'\t' read -r name version path; do
+            # Tag format matches what `claude plugin tag` produces.
+            tag="${name}--v${version}"
+            if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+              echo "${tag} already exists, nothing to do"
+              continue
+            fi
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "DRY RUN: would tag ${path} as ${tag}"
+              continue
+            fi
+            echo "Tagging ${path} as ${tag}"
+            git tag -a "${tag}" -m "${name} ${version}"
+            created+=("${tag}")
+          done < <(python3 scripts/plugin_versions.py)
+
+          if [ ${#created[@]} -eq 0 ]; then
+            echo "Nothing to tag"
+            echo "tags=[]" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git push origin "${created[@]}"
+
+          printf '%s\n' "${created[@]}" \
+            | python3 -c 'import json,sys; print("tags=" + json.dumps([l.strip() for l in sys.stdin if l.strip()]))' \
+            >> "$GITHUB_OUTPUT"
+
+      - name: Summary
+        run: |
+          {
+            echo "### auto-tag"
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "Dry run. No tags were created. See the step log for the plan."
+            else
+              echo "Tags created: \`${{ steps.create.outputs.tags }}\`"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  release:
+    name: Release ${{ matrix.tag }}
+    needs: tag
+    if: needs.tag.outputs.tags != '[]' && needs.tag.outputs.tags != ''
+    # Calling the release workflow directly avoids the rule that a tag pushed
+    # with GITHUB_TOKEN cannot trigger another workflow. No PAT needed.
+    strategy:
+      matrix:
+        tag: ${{ fromJson(needs.tag.outputs.tags) }}
+      fail-fast: false
+    uses: ./.github/workflows/release-skills.yml
+    with:
+      tag: ${{ matrix.tag }}
+    permissions:
+      contents: write
