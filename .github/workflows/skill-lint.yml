@@ -1,0 +1,63 @@
+name: skill-lint
+
+on:
+  pull_request:
+    paths:
+      - '.claude-plugin/**'
+      - 'plugins/**'
+      - 'scripts/validate_marketplace.py'
+      - '.github/workflows/skill-lint.yml'
+  push:
+    branches: [main]
+    paths:
+      - '.claude-plugin/**'
+      - 'plugins/**'
+      - 'scripts/validate_marketplace.py'
+      - '.github/workflows/skill-lint.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate manifests and skills
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Validate marketplace, plugins, and skills
+        run: python3 scripts/validate_marketplace.py
+
+  official-validator:
+    name: claude plugin validate
+    runs-on: ubuntu-latest
+    # Advisory. The upstream validator can change its warnings between releases,
+    # so it reports without gating merges. The validate job above is the gate.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Validate marketplace manifest
+        run: claude plugin validate . --strict
+
+      - name: Validate each plugin
+        run: |
+          set -euo pipefail
+          for plugin in plugins/*/; do
+            [ -f "$plugin/.claude-plugin/plugin.json" ] || continue
+            echo "::group::$plugin"
+            claude plugin validate "$plugin" --strict
+            echo "::endgroup::"
+          done
