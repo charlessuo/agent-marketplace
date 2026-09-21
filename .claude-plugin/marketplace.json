@@ -10,8 +10,8 @@
     {
       "name": "productivity",
       "displayName": "Productivity",
-      "description": "Skills for writing and editing. Includes unslop, which strips AI tells out of prose.",
-      "version": "0.1.0",
+      "description": "Skills for focused communication and editing. Includes i-have-adhd and unslop.",
+      "version": "0.2.0",
       "author": {
         "name": "Chao Suo",
         "email": "charlessuo@gmail.com"
@@ -21,7 +21,8 @@
       "keywords": [
         "writing",
         "editing",
-        "style"
+        "adhd",
+        "productivity"
       ]
     }
   ]
