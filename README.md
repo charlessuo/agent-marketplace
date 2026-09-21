@@ -1,28 +1,40 @@
 # agent-marketplace
 
-A Claude Code plugin marketplace. Each plugin is a separate install, so you can
-take one and leave the rest.
+A Claude Code and Codex-compatible plugin marketplace. Each plugin is a
+separate install, so you can take one and leave the rest.
 
 ## Install
+
+### Claude Code
 
 ```
 /plugin marketplace add charlessuo/agent-marketplace
 /plugin install productivity@agent-marketplace
 ```
 
+### Codex
+
+```sh
+codex plugin marketplace add charlessuo/agent-marketplace
+codex plugin add productivity@agent-marketplace
+```
+
+Codex reads the existing Claude-compatible marketplace and loads the same
+`skills/` files, so no duplicate skill tree or symlink is needed.
+
 ## Plugins
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| `productivity` | 0.1.0 | Writing and editing skills. Ships `unslop`, which removes AI tells from prose. |
+| `productivity` | 0.2.0 | Focused communication and editing. Ships `i-have-adhd` and `unslop`. |
 
 ## Layout
 
 ```
-.claude-plugin/marketplace.json   the catalog Claude Code reads
+.claude-plugin/marketplace.json   the catalog Claude Code and Codex read
 plugins/<plugin>/
-  .claude-plugin/plugin.json      the plugin manifest
-  skills/<skill>/SKILL.md         one directory per skill
+  .claude-plugin/plugin.json      the shared plugin manifest
+  skills/<skill>/SKILL.md         shared by Claude Code and Codex
 scripts/                          validation and version helpers used by CI
 ```
 
@@ -39,11 +51,12 @@ Create `plugins/<plugin>/skills/<skill>/SKILL.md` with frontmatter:
 ```markdown
 ---
 name: my-skill
-description: One line telling Claude when to reach for this.
+description: One line telling the agent when to reach for this.
 ---
 ```
 
-Then bump the plugin `version` in both manifests and open a PR.
+Then bump the plugin `version` in both the plugin manifest and marketplace
+entry, and open a PR.
 
 ## Adding a plugin
 
@@ -85,7 +98,7 @@ claude plugin tag ./plugins/productivity --push
 
 1. Run **auto-tag** from the Actions tab with `dry_run` checked. It validates
    the manifests and prints the tags it would create, without creating them.
-2. Run **release-skills** with `tag: productivity--v0.1.0` and `dry_run`
+2. Run **release-skills** with `tag: productivity--v0.2.0` and `dry_run`
    checked. It builds the archives and release notes and attaches them to the
    run as a downloadable artifact, without publishing a release. The tag does
    not need to exist yet; a dry run falls back to the current branch and says so.
