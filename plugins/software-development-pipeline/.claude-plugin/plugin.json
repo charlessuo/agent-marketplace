@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
-  "name": "software-development",
-  "description": "Engineering skills for specification, TDD, code review, architecture, and domain modeling.",
+  "name": "software-development-pipeline",
+  "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
   "version": "0.1.0",
   "author": {
     "name": "Chao Suo",

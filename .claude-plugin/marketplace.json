@@ -27,23 +27,24 @@
       ]
     },
     {
-      "name": "software-development",
-      "displayName": "Software Development",
-      "description": "Engineering skills for specification, TDD, code review, architecture, and domain modeling.",
+      "name": "software-development-pipeline",
+      "displayName": "Software Development Pipeline",
+      "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
       "version": "0.1.0",
       "author": {
         "name": "Chao Suo",
         "email": "charlessuo@gmail.com"
       },
-      "source": "./plugins/software-development",
+      "source": "./plugins/software-development-pipeline",
       "category": "development",
       "keywords": [
         "engineering",
-        "software-development",
+        "software-development-pipeline",
         "tdd",
         "code-review",
-        "architecture",
-        "domain-modeling"
+        "acceptance-testing",
+        "quality-assurance",
+        "work-distribution"
       ]
     }
   ]

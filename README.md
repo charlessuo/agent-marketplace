@@ -28,8 +28,8 @@ subdirectory:
 hermes plugins install charlessuo/agent-marketplace/plugins/productivity --no-enable
 hermes plugins enable productivity
 
-hermes plugins install charlessuo/agent-marketplace/plugins/software-development --no-enable
-hermes plugins enable software-development
+hermes plugins install charlessuo/agent-marketplace/plugins/software-development-pipeline --no-enable
+hermes plugins enable software-development-pipeline
 ```
 
 Codex reads the existing Claude-compatible marketplace and loads the same
@@ -40,7 +40,7 @@ Codex reads the existing Claude-compatible marketplace and loads the same
 | Plugin | Version | What it does |
 | --- | --- | --- |
 | `productivity` | 0.3.0 | Focused communication and editing, including `i-have-adhd`, `unslop`, and upstream `grilling`. |
-| `software-development` | 0.1.0 | Upstream engineering skills for specs, TDD, code review, architecture, and domain modeling. |
+| `software-development-pipeline` | 0.1.0 | Workflows for specs, TDD, code review, acceptance testing, QA verdicts, and work distribution. |
 
 ## Layout
 
