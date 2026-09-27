@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "productivity",
-  "description": "Skills for focused communication and editing. Includes i-have-adhd and unslop.",
-  "version": "0.2.0",
+  "description": "Skills for focused communication, editing, and collaborative decision-making. Includes i-have-adhd, unslop, and grilling.",
+  "version": "0.3.0",
   "author": {
     "name": "Chao Suo",
     "email": "charlessuo@gmail.com"

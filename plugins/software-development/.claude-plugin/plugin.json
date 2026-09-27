@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "software-development",
+  "description": "Engineering skills for specification, TDD, code review, architecture, and domain modeling.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Chao Suo",
+    "email": "charlessuo@gmail.com"
+  },
+  "keywords": [
+    "engineering",
+    "software-development",
+    "tdd",
+    "code-review",
+    "architecture",
+    "domain-modeling"
+  ]
+}

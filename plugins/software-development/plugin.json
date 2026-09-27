@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "software-development",
+  "version": "0.1.0",
+  "description": "Engineering skills for specification, TDD, code review, architecture, and domain modeling.",
+  "author": {
+    "name": "Chao Suo",
+    "email": "charlessuo@gmail.com"
+  },
+  "repository": "https://github.com/charlessuo/agent-marketplace",
+  "license": "MIT",
+  "keywords": ["engineering", "software-development", "tdd", "code-review", "architecture", "domain-modeling"]
+}

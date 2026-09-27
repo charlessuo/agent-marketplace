@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "description": "Skill provenance and comparison baselines. Hashes cover every regular file in each skill directory, including supporting files.",
+  "sources": [
+    {
+      "repository": "https://github.com/ayghri/i-have-adhd.git",
+      "ref": "main",
+      "path": "skills/i-have-adhd",
+      "single_skill": true,
+      "plugin": "productivity",
+      "license": "MIT",
+      "skills": [
+        {
+          "name": "i-have-adhd",
+          "local_path": "plugins/productivity/skills/i-have-adhd",
+          "imported_commit": null,
+          "imported_sha256": null,
+          "local_baseline_sha256": "f54d32768b40f1b00ed39dad7917182143adf49c95e375975de6881f1d997855",
+          "observed_upstream_commit": "839872f9d1cd634fed642b4589ce7226199cc15f",
+          "observed_upstream_sha256": "fa5609f9135595dcef3a4a81420abdf20a55054d7f6f0990b7881cd2f4de751b",
+          "import_history": "unknown; origin confirmed by repository maintainer"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/cursor/plugins.git",
+      "ref": "main",
+      "path": "pstack/skills/unslop",
+      "single_skill": true,
+      "plugin": "productivity",
+      "license": "MIT",
+      "skills": [
+        {
+          "name": "unslop",
+          "local_path": "plugins/productivity/skills/unslop",
+          "imported_commit": null,
+          "imported_sha256": null,
+          "local_baseline_sha256": "eb6c3b4f629b6a35169cc0f5ab1a908afbc1aa09ffafdc5bd22d7e151fc987c4",
+          "observed_upstream_commit": "ecc249f1e306fc64ddf83c7bed16cacf7c2239db",
+          "observed_upstream_sha256": "0aefd15e0b73e3963ead74723fe0a23e8fb282b0f472dac75ad661049e8a6c4c",
+          "import_history": "unknown; origin confirmed by repository maintainer"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/mattpocock/skills.git",
+      "ref": "main",
+      "path": "skills/productivity",
+      "plugin": "productivity",
+      "license": "MIT",
+      "skills": [
+        {
+          "name": "grilling",
+          "local_path": "plugins/productivity/skills/grilling",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "d5833e50e0081bbf5133b6c6b61aa8ba9ffae66e9071404b61e45b18f4cdb57e"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/mattpocock/skills.git",
+      "ref": "main",
+      "path": "skills/engineering",
+      "plugin": "software-development",
+      "license": "MIT",
+      "skills": [
+        {
+          "name": "to-spec",
+          "local_path": "plugins/software-development/skills/to-spec",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "f525dab8b9bd3961aa4813d8568ef6184f6e24aad5a020e129165ca6c220f836"
+        },
+        {
+          "name": "tdd",
+          "local_path": "plugins/software-development/skills/tdd",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "2da488cb71308948f58928bbbae6d55d060d5414d5bb3ec7ee7d4bb73c670442"
+        },
+        {
+          "name": "code-review",
+          "local_path": "plugins/software-development/skills/code-review",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "2bf54bc5e5eed6f8c78b2dbe99bfcfcc0e0221e0c11dbf07ff0f27effb2aed76"
+        },
+        {
+          "name": "codebase-design",
+          "local_path": "plugins/software-development/skills/codebase-design",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "826e65f8d718794b0647dd50122d3c388c6e860c608d6aa313d7d716ff535933"
+        },
+        {
+          "name": "improve-codebase-architecture",
+          "local_path": "plugins/software-development/skills/improve-codebase-architecture",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "86096700ab48a5fb3d8b8dd73b60b4474925d63e4b3585ec07e5979a04e9ce2d"
+        },
+        {
+          "name": "domain-modeling",
+          "local_path": "plugins/software-development/skills/domain-modeling",
+          "imported_commit": "c55ee46073ed923f86ce59a5eb3b6d895095d1b7",
+          "imported_sha256": "2cc88b237a4704f9fe2057492024856a48ea803a5b9257b1c1e3174eb1f13a09"
+        }
+      ]
+    }
+  ]
+}

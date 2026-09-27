@@ -1,7 +1,7 @@
 # agent-marketplace
 
-A Claude Code and Codex-compatible plugin marketplace. Each plugin is a
-separate install, so you can take one and leave the rest.
+A Claude Code, Codex, and Hermes-compatible plugin marketplace. Each plugin is
+a separate install, so you can take one and leave the rest.
 
 ## Install
 
@@ -19,6 +19,19 @@ codex plugin marketplace add charlessuo/agent-marketplace
 codex plugin add productivity@agent-marketplace
 ```
 
+### Hermes
+
+Each plugin is a portable Agent Plugin package and can be installed from its
+subdirectory:
+
+```sh
+hermes plugins install charlessuo/agent-marketplace/plugins/productivity --no-enable
+hermes plugins enable productivity
+
+hermes plugins install charlessuo/agent-marketplace/plugins/software-development --no-enable
+hermes plugins enable software-development
+```
+
 Codex reads the existing Claude-compatible marketplace and loads the same
 `skills/` files, so no duplicate skill tree or symlink is needed.
 
@@ -26,7 +39,8 @@ Codex reads the existing Claude-compatible marketplace and loads the same
 
 | Plugin | Version | What it does |
 | --- | --- | --- |
-| `productivity` | 0.2.0 | Focused communication and editing. Ships `i-have-adhd` and `unslop`. |
+| `productivity` | 0.3.0 | Focused communication and editing, including `i-have-adhd`, `unslop`, and upstream `grilling`. |
+| `software-development` | 0.1.0 | Upstream engineering skills for specs, TDD, code review, architecture, and domain modeling. |
 
 ## Layout
 
@@ -34,8 +48,10 @@ Codex reads the existing Claude-compatible marketplace and loads the same
 .claude-plugin/marketplace.json   the catalog Claude Code and Codex read
 plugins/<plugin>/
   .claude-plugin/plugin.json      the shared plugin manifest
+  plugin.json                    Agent Plugins v1 manifest for Hermes
   skills/<skill>/SKILL.md         shared by Claude Code and Codex
 scripts/                          validation and version helpers used by CI
+skill-sources.json                imported-skill source commits and fingerprints
 ```
 
 Two rules the CI enforces, both of which are easy to get wrong:
@@ -67,6 +83,23 @@ entry, and open a PR.
 3. Add skills under `plugins/<name>/skills/`.
 
 Run `python3 scripts/validate_marketplace.py` before pushing.
+
+## Imported skill sources
+
+Vendored skills keep their upstream repository, source directory, import commit,
+and content hash in [`skill-sources.json`](skill-sources.json). This makes
+upstream changes and local customizations visible without changing the imported
+files. Run the crawler from the repository root:
+
+```sh
+python3 scripts/check_skill_sources.py
+```
+
+It checks each configured source tree and reports upstream updates, local edits,
+missing source metadata, and upstream skills not imported into this repo. Use
+`--strict` to return a nonzero status when any finding exists. To check existing
+clones without network access, pass `--checkout https://github.com/mattpocock/skills.git=/path/to/skills-clone`
+for each repository.
 
 ## Releases
 

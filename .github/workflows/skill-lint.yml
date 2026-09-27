@@ -5,6 +5,8 @@ on:
     paths:
       - '.claude-plugin/**'
       - 'plugins/**'
+      - 'skill-sources.json'
+      - 'scripts/check_skill_sources.py'
       - 'scripts/validate_marketplace.py'
       - '.github/workflows/skill-lint.yml'
   push:
@@ -12,6 +14,8 @@ on:
     paths:
       - '.claude-plugin/**'
       - 'plugins/**'
+      - 'skill-sources.json'
+      - 'scripts/check_skill_sources.py'
       - 'scripts/validate_marketplace.py'
       - '.github/workflows/skill-lint.yml'
   workflow_dispatch:
