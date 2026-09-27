@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "software-development-pipeline",
+  "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Chao Suo",
+    "email": "charlessuo@gmail.com"
+  },
+  "keywords": [
+    "engineering",
+    "software-development",
+    "specification",
+    "tdd",
+    "code-review",
+    "acceptance-testing",
+    "quality-assurance",
+    "work-distribution"
+  ]
+}

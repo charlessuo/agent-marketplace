@@ -10,8 +10,8 @@
     {
       "name": "productivity",
       "displayName": "Productivity",
-      "description": "Skills for focused communication and editing. Includes i-have-adhd and unslop.",
-      "version": "0.2.0",
+      "description": "Skills for focused communication, editing, and collaborative decision-making. Includes i-have-adhd, unslop, and grilling.",
+      "version": "0.3.0",
       "author": {
         "name": "Chao Suo",
         "email": "charlessuo@gmail.com"
@@ -22,7 +22,29 @@
         "writing",
         "editing",
         "adhd",
-        "productivity"
+        "productivity",
+        "grilling"
+      ]
+    },
+    {
+      "name": "software-development-pipeline",
+      "displayName": "Software Development Pipeline",
+      "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chao Suo",
+        "email": "charlessuo@gmail.com"
+      },
+      "source": "./plugins/software-development-pipeline",
+      "category": "development",
+      "keywords": [
+        "engineering",
+        "software-development-pipeline",
+        "tdd",
+        "code-review",
+        "acceptance-testing",
+        "quality-assurance",
+        "work-distribution"
       ]
     }
   ]

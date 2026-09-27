@@ -129,6 +129,18 @@ def check_plugin(plugin_dir: Path, entry: dict, seen: dict[str, Path]) -> None:
                 f"but {manifest.get(field)!r} in plugin.json",
             )
 
+    # Hermes loads portable Agent Plugins v1 manifests from the plugin root.
+    portable_path = plugin_dir / "plugin.json"
+    portable = load_json(portable_path)
+    if portable is not None:
+        if portable.get("$schema") != "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json":
+            fail(portable_path, "must declare the Agent Plugins v1.0.0 schema")
+        for field in ("name", "version"):
+            if portable.get(field) != manifest.get(field):
+                fail(portable_path, f"{field} must match the Claude plugin manifest")
+        if not portable.get("description"):
+            fail(portable_path, "missing required package description")
+
     skills_dir = plugin_dir / "skills"
     if not skills_dir.is_dir():
         return
