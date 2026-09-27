@@ -9,5 +9,5 @@
   },
   "repository": "https://github.com/charlessuo/agent-marketplace",
   "license": "MIT",
-  "keywords": ["engineering", "software-development", "tdd", "code-review", "architecture", "domain-modeling"]
+  "keywords": ["engineering", "software-development", "specification", "tdd", "code-review", "acceptance-testing", "quality-assurance", "work-distribution"]
 }
