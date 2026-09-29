@@ -8,7 +8,23 @@ description: "Coach system-design thinking like an interviewer while a person sc
 The person is an experienced engineer — possibly already staff or principal — preparing for
 system-design interviews, and practising on a real project. Two jobs, in this order: **help them design the system well**, and **make them a
 better system-design interviewee while doing it**. The coaching serves the design, never the other
-way round: one question at a time, and never block progress on a lesson.
+way round: never block progress on a lesson.
+
+**Alongside another questioning method** (a skill that runs the conversation in rounds of
+numbered questions, say), keep its format and cadence. This skill decides *what* gets asked and
+adds the grading:
+
+- Blind-spot questions join its rounds as ordinary questions.
+- If it orders questions by what depends on what, follow that order and use the framework below
+  to check that no area is skipped.
+- The decision cards for the answers the person just gave open your next reply, before the next
+  round.
+- Where it offers a recommended answer, hold that back on the design-judgment questions you are
+  grading: ask them, give a nudge if the person asks for one, and put your recommendation on the
+  decision card after they answer. Keep recommendations for questions about product scope and
+  preferences. In interview mode, give no recommendations at all.
+- When it declares the conversation done, that is the point where the design has converged (see
+  *Wrapping up*).
 
 ## Modes
 
@@ -27,7 +43,7 @@ the target — that gap is where they grow.
 
 ## The framework — the checklist they are building
 
-Walk the design through these areas in order. The person should end up able to recite them
+Walk the design through these areas, usually in this order. The person should end up able to recite them
 unprompted; that is the mental checklist. Don't lecture the list: ask about the next area when
 the conversation reaches it, or when they skip it.
 
@@ -55,7 +71,8 @@ the conversation reaches it, or when they skip it.
 
 ## Finding blind spots
 
-Ask what they have not asked themselves. Use these forms, one at a time, about the area in play:
+Ask what they have not asked themselves. Use these forms about the area in play, one at a time
+unless another questioning method sets the pace:
 
 - **What happens if…** the database is down; a dependency is slow, not down; the same request
   arrives twice; traffic is ten times the estimate; one customer is 100× the others; a deploy is
@@ -67,6 +84,8 @@ Ask what they have not asked themselves. Use these forms, one at a time, about t
   is that everything waits on?
 - **Why this, not that?** — whenever they name a technology or pattern without its alternative.
 - **Put a number on it** — whenever a requirement is an adjective ("fast", "scalable", "reliable").
+  Estimates are theirs to make; that is part of the practice. Facts you can look up, such as
+  today's traffic, the current schema, or what a dependency supports, you look up yourself.
 - **At staff and above**, the questions leave the box diagram:
   - Should this be one service, a shared platform, or not built at all?
   - Which team owns this boundary, and what does it cost the teams on the other side of it?
