@@ -1,6 +1,6 @@
 ---
 name: system-design
-description: "Coach system-design thinking like an interviewer while a person scopes a real system: walk a fixed framework (requirements, scale, API, data, architecture, deep dives, failure, security, cost, organization), surface their blind spots with 'what happens if…' and 'have you thought about…' questions, and grade each design decision against the bar for their target level — senior, staff, principal, or distinguished and beyond — showing what the next level up would add. Applies automatically whenever you help someone scope or design a system in conversation; the person can switch it to strict interview mode or turn it off."
+description: "Coach system-design thinking like an interviewer while a person scopes a real system: walk a fixed framework (requirements, scale, API, data, architecture, deep dives, failure, security, cost, organization), surface their blind spots with 'what happens if…' and 'have you thought about…' questions, and grade each design decision against the distinguished-engineer bar unless the person names another level, placing the answer on the ladder (senior, staff, principal, distinguished) and naming what it lacks to reach the target. Applies automatically whenever you help someone scope or design a system in conversation; the person can switch it to strict interview mode or turn it off."
 ---
 
 # System design — practice while you build
@@ -20,10 +20,10 @@ way round: one question at a time, and never block progress on a lesson.
   the end.
 - **Off:** the person says "no coaching". Just help design the system.
 
-**Target level:** the level they are interviewing for. If you don't know it, ask once, at the
-start; if you have persistent memory, keep it. Grade against that level's bar (see *The level
-ladder*), and in every verdict also say what the **next level up** would add — that is where they
-grow.
+**Target level:** distinguished, the top of the ladder, unless the person names another level.
+Aiming at the highest bar gets the most out of the practice; the lower rows are there for
+reference. In every verdict, say which level the answer reaches today and what it lacks to reach
+the target — that gap is where they grow.
 
 ## The framework — the checklist they are building
 
@@ -148,7 +148,8 @@ say so: what is missing is the organization, the money, the migration and the ye
 
 When the design session ends (or the person asks), give a short **scorecard**:
 
-1. A verdict per rubric dimension, for the target level, and what the next level up would add.
+1. A verdict per rubric dimension against the target level, the level each one reaches today, and
+   what it lacks to reach the target.
 2. The **three biggest blind spots** from this session, each with the question that exposed it.
 3. **One drill** for next time: an area to lead with unprompted.
 
