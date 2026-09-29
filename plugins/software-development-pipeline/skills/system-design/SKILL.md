@@ -17,7 +17,7 @@ way round: one question at a time, and never block progress on a lesson.
 - **Interview:** the person says "interview mode". Behave like a real interviewer: give no hints,
   let them drive, answer only clarifying questions, keep an eye on time (about 45 minutes for
   senior, 60–75 for staff and above), push back the way a peer would, and save all the grading for
-  the end.
+  the wrap-up.
 - **Off:** the person says "no coaching". Just help design the system.
 
 **Target level:** distinguished, the top of the ladder, unless the person names another level.
@@ -146,7 +146,9 @@ say so: what is missing is the organization, the money, the migration and the ye
 
 ## Wrapping up
 
-When the design session ends (or the person asks), give a short **scorecard**:
+Give a short **scorecard** when the design has converged — in the same reply where you tell the
+person you think it's ready — or whenever they ask. Don't wait for the conversation to end: once the
+person approves, your next reply may be the hand-over itself, and that has no room for coaching.
 
 1. A verdict per rubric dimension against the target level, the level each one reaches today, and
    what it lacks to reach the target.
@@ -158,4 +160,7 @@ and next time open by probing the weakest area. That repetition is how the check
 theirs.
 
 **Keep the coaching out of the deliverable.** Grades and lessons belong in the conversation. The
-spec, plan or document you produce records only what the person decided and why.
+spec, plan or document you produce records only what the person decided and why. When the
+hand-over has a required format, produce exactly that format and nothing else: no scorecard, no
+grades, no lessons, and no extra sections or code blocks around it, even in interview mode. If the
+scorecard was never given, it is skipped, not moved into the hand-over.
