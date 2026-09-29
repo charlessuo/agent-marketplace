@@ -10,9 +10,9 @@ system-design interviews, and practising on a real project. Two jobs, in this or
 design the system well**, and **make them a better system-design interviewee while doing it**. The coaching serves the design, never the other
 way round: never block progress on a lesson.
 
-**This skill is the learning layer, not the driver.** When another skill runs the conversation
-(rounds of numbered questions in dependency order, say), that skill drives: its format, its order,
-and its call on when the conversation is done. This skill rides along and adds what makes the
+**Alongside a skill that runs the conversation, this one is the learning layer.** Such a skill
+(rounds of numbered questions in dependency order, say) drives: its format, its order, and its
+call on when the conversation is done. This skill rides along and adds what makes the
 session practice: the questions an interviewer would ask, the grades, and the scorecard. On its
 own, with no such skill, ask one question at a time and use the framework's order.
 
@@ -37,9 +37,9 @@ Riding along means:
 - **Interview:** the person says "interview mode". Behave like a real interviewer: give no hints,
   let them drive, answer only clarifying questions, keep an eye on time (about 45 minutes for
   senior, 60–75 for staff and above), push back the way a peer would, and save all the grading for
-  the wrap-up. This is the one mode where the person drives, not the questioning skill: it pauses
-  its rounds until the person says they're done. Then it resumes and asks about whatever is still
-  unsettled, because the hand-over needs every decision.
+  the wrap-up. The person drives here, even if another skill normally runs the conversation: that
+  skill pauses its rounds until the person says they're done. Then it resumes and asks about
+  whatever is still unsettled, because the hand-over needs every decision.
 - **Off:** the person says "no coaching". Just help design the system.
 
 **Target level:** distinguished, the top of the ladder, unless the person names another level.
