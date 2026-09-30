@@ -39,6 +39,7 @@ hermes plugins enable software-development-pipeline
 - `qa-author` — write black-box acceptance tests from criteria.
 - `qa-verdict` — assess a test run and report its QA verdict.
 - `distribute-work` — select and assign the next ready item of work.
+- `system-design` — coach system-design thinking like an interviewer while scoping a real system: a checklist framework, blind-spot questions, and a senior-level grading rubric.
 
 From the repository root, run `python3 scripts/check_skill_sources.py` to find
 local edits, upstream updates, and upstream skills in these source trees that

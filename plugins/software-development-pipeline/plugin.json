@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "software-development-pipeline",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
   "author": {
     "name": "Chao Suo",

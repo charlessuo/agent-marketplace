@@ -30,7 +30,7 @@
       "name": "software-development-pipeline",
       "displayName": "Software Development Pipeline",
       "description": "Workflows for specs, test-driven implementation, code review, acceptance testing, QA verdicts, and work distribution.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "Chao Suo",
         "email": "charlessuo@gmail.com"
