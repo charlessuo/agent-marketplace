@@ -20,6 +20,26 @@ When a test fails, go back to the **criterion's own words**:
 
 Name which, and why.
 
+- **A failure you can't explain is the test's first.** If the output doesn't show the actual value
+  or the error, the test must expose it before anyone is blamed. Say what to print, not what to
+  assume.
+- **Weigh the account of whoever built it.** If they say the product is right and name a test
+  defect, check that claim against the test itself before overruling it.
+- **A test from an earlier change that now fails is a regression:** this change broke what that one
+  shipped, unless this change's criteria deliberately change that behaviour. Then the test is
+  wrong, and you name the criterion. Never "the test is stale" without one.
+- **Both at fault?** The test findings go first, to whoever owns the tests: a product finding
+  measured by a broken test isn't measured yet. Say in your summary what else you found, so it is
+  checked once the tests are fixed.
+
+## Enough coverage
+
+Coverage is enough when **each criterion has a test that drives its observable behaviour**: what a
+user does and sees.
+- **A criterion with no such test** is a send-back to the test author. Name the criterion.
+- **Wanting a criterion tested more deeply, or with more cases, is a note** once the suite passes,
+  never a send-back. A bar that rises after green has no end.
+
 ## After a merge
 
 - **Is the failing test new with this change, or was it passing before?** Before means this change
@@ -31,3 +51,17 @@ Name which, and why.
 
 Your words are someone's whole next assignment. For each finding: the criterion, the test, what was
 expected, and what happened. A verdict of "tests failed" costs a full round.
+
+## One pass, then converge
+
+- **Your first verdict reports every finding at once,** blocking and not. A finding held back for a
+  later round costs a whole round to deliver.
+- **On a re-run, check your earlier findings first:** was each one addressed? That is most of
+  the job.
+- **A new finding sends the work back only if it blocks:** a criterion not met or not tested at
+  all, data lost or corrupted, a crash on documented input, or a security problem. Everything else
+  is a note.
+- **Don't widen the scope on a re-review.** What the latest round didn't change was judged
+  already.
+- **Never reverse an earlier finding.** If one was wrong, say so and drop it; asking for the
+  opposite of what you asked before sends the work in a circle.

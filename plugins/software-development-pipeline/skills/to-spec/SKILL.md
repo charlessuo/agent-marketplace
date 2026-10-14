@@ -51,6 +51,14 @@ encodes a decision more precisely than prose; trim it and say where it came from
 - **Each item says how you'd know it works, from the outside,** and names the stories it covers.
 - **Each item is independently implementable and testable.** Two changes that must land together
   are one item; small beats large.
+- **Every term a criterion depends on is defined,** in observable terms: what a word like
+  "eligible", "complete" or "last successful state" means as something a user can see. An
+  undefined term is read two ways by the implementer and the tester, and each round flips between
+  them.
+- **A criterion about failure or bad input lists its cases,** as a closed list: no "such as", no
+  "etc.". An open list can be extended by every reviewer, every round.
+- **Each item says what it leaves out:** nearby behaviour a reader might assume it covers, stated
+  as out of scope, so nobody tests for it.
 - **A dependency only where one item truly needs another first.**
 - **Human review for anything irreversible or load-bearing.**
 
