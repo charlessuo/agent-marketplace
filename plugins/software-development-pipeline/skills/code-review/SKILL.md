@@ -58,6 +58,22 @@ Quote the criterion for each.
 - **Request changes only for** a hard standards violation or a spec finding. **Smells never
   block;** list them as optional notes. Sending work back for a judgement call spends someone's
   retries on opinion.
+- **A spec finding is a criterion missing, partial or wrong,** in the criterion's own words. An
+  edge case the criterion never names is a note, however plausible.
 - Every finding starts with `[Standards]` or `[Spec]`.
 - Report the count per axis and the worst finding **within** each axis, never one winner across
   axes.
+
+## One pass, then converge
+
+- **Your first review reports every finding at once,** blocking and not. A finding held back for a
+  later round costs a whole round to deliver.
+- **On a re-review, check your earlier findings first:** was each one addressed? That is most of
+  the job.
+- **A new finding sends the work back only if it blocks:** a criterion not met, data lost or
+  corrupted, a crash on documented input, a security problem, or a hard standards violation.
+  Everything else is a note.
+- **Don't widen the scope on a re-review.** What the latest round didn't change was reviewed
+  already.
+- **Never reverse an earlier finding.** If one was wrong, say so and drop it; asking for the
+  opposite of what you asked before sends the work in a circle.

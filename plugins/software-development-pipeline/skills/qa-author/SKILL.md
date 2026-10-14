@@ -23,6 +23,12 @@ Tests that live alongside every other change's tests, and re-run after each one,
 - **Tolerant of what the criterion leaves open:** wording, layout, ordering and ids it never
   promised. Those will change.
 
+## Other changes' tests aren't yours
+
+Tests that came with another change hold the behaviour it shipped. **Change one only when one of
+your criteria changes that behaviour,** and name the criterion. A test of another change that now
+fails is a finding about the product, not a test to bring in line.
+
 ## The environment is yours to keep declared
 
 - **A tool your tests need is installed where the project builds its test environment, and
