@@ -52,13 +52,13 @@ its author. If you can't reach the source to capture one, say so.
 5. **Finish by running the project's whole unit suite, the way your brief says it is run.** It must
    be green.
 
-**Refactoring isn't part of the loop, with one exception.** If your change would push a function
+**Leave refactoring out of the loop, with one exception.** If your change would push a function
 over the project's complexity rules, extract the new path into its own function in the same change.
-Never add a lint suppression to code you wrote. A function that is already suppressed as known
-debt doesn't grow: your new path goes in a function of its own.
+Never add a lint suppression to code you wrote. Don't grow a function already suppressed as known
+debt either. Put your new path in a function of its own.
 
-**Names follow the glossary.** One concept, one name. Two concepts never share a variable, a
-collection or a loop, even when their values look alike today.
+**Name things with the glossary's terms.** Give each concept one name. Keep two concepts in separate
+variables, collections and loops, even when their values look alike today.
 
 Leave nothing behind that your test runs created:
 caches, reports and build output.
