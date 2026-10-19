@@ -49,7 +49,10 @@ Do this separately; don't carry the Standards judgement into it. Report:
 - criteria that are **missing or partial**;
 - behaviour **nobody asked for**. Supporting changes the work needed, and the records your brief
   requires, are not scope creep;
-- criteria that look implemented but **look wrong**.
+- criteria that look implemented but **look wrong**;
+- code that parses **another system's format**, such as a page, an API response or an exported
+  file, tested only on samples someone wrote by hand. Ask for a trimmed real capture. A
+  hand-written sample proves only that the code agrees with its author.
 
 Quote the criterion for each.
 
@@ -60,6 +63,10 @@ Quote the criterion for each.
   retries on opinion.
 - **A spec finding is a criterion missing, partial or wrong,** in the criterion's own words. An
   edge case the criterion never names is a note, however plausible.
+- **Quote what a blocking finding breaks.** Name the criterion, decision record or documented
+  standard, and quote its words. If you can't quote any, report the finding as a note.
+- **Keep closed lists closed.** Report an input outside a list the requirement calls complete as a
+  note. Do the same for a request for anything the requirement puts out of scope.
 - Every finding starts with `[Standards]` or `[Spec]`.
 - Report the count per axis and the worst finding **within** each axis, never one winner across
   axes.

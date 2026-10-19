@@ -52,6 +52,10 @@ user does and sees.
 Your words are someone's whole next assignment. For each finding: the criterion, the test, what was
 expected, and what happened. A verdict of "tests failed" costs a full round.
 
+**Quote the criterion's words before you send work back.** If you can't quote them, record the
+finding as a note. Record these as notes too: an input outside a list the requirement calls
+complete, and a request for anything the requirement puts out of scope.
+
 ## One pass, then converge
 
 - **Your first verdict reports every finding at once,** blocking and not. A finding held back for a
