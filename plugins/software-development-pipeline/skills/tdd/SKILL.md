@@ -29,10 +29,10 @@ A **seam** is the public boundary you test at. Tests live at seams, never agains
 Prefer a real database when the environment has one. Never mock your own modules. To keep
 boundaries mockable, pass external clients in, and give each external operation its own function.
 
-**What a boundary returns comes from a real sample.** A fixture standing in for another system's
-page, response or file is a trimmed real capture, with its source and date recorded. Never write it
-from what the format probably looks like: the parser would only agree with its author. If you can't
-reach the source to capture one, say so.
+**Build boundary fixtures from real samples.** Make each fixture that stands in for another
+system's page, response or file a trimmed real capture, and record its source and capture date next
+to it. Never write one from what the format probably looks like, or the parser will agree only with
+its author. If you can't reach the source to capture one, say so.
 
 ## Anti-patterns
 

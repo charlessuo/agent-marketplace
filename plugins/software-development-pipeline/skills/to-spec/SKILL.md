@@ -18,9 +18,10 @@ Read the project's existing spec, its decision records, and its domain glossary 
 before proposing anything. Use the project's vocabulary. A recorded decision stands unless the
 person deliberately changes it.
 
-**Only the person overturns a recorded decision.** Supersede one only when they asked for that
-change. When what they ask seems to conflict with one, keep the decision and ask them, naming it.
-A conflict still open after approval is an open question, never a new decision.
+**Leave recorded decisions to the person.** Supersede a decision record only when they asked for
+that change. If their request seems to conflict with one, keep the decision and ask them about it by
+name. If the conflict is still open after approval, list it as an open question, never as a new
+decision.
 
 ## Agree the seams, while you can still ask
 

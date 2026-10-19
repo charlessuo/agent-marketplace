@@ -19,10 +19,11 @@ columns an import file needs, the config keys, the input formats. Read them wher
 (the schema or migrations, the documented formats, another test's working fixture) before writing
 the setup, never guess them. A test that fails on its own setup has measured nothing.
 
-**What stands in for another system is built from a real sample of it.** A page, an API response or
-a file your test serves in place of a third party starts from a real capture, trimmed or varied for
-the case, never from what it probably looks like. Invented markup tests only that the product agrees
-with whoever invented it. With no capture to start from, say so.
+**Build every stand-in for another system from a real sample of it.** Start each page, API response
+or file your test serves in place of a third party from a real capture, then trim or vary it for the
+case. Never write one from what the format probably looks like: invented markup tests only that the
+product agrees with whoever invented it. If you have no capture to start from, say so in your
+summary.
 
 ## Tests that stay valid
 

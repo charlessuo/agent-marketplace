@@ -52,9 +52,9 @@ user does and sees.
 Your words are someone's whole next assignment. For each finding: the criterion, the test, what was
 expected, and what happened. A verdict of "tests failed" costs a full round.
 
-**A finding that sends work back quotes the criterion's words it breaks.** If you can't quote
-them, it is a note. An input outside a list the requirement calls complete, or a demand for what it
-puts out of scope, is a note too.
+**Quote the criterion's words before you send work back.** If you can't quote them, record the
+finding as a note. Record these as notes too: an input outside a list the requirement calls
+complete, and a request for anything the requirement puts out of scope.
 
 ## One pass, then converge
 
