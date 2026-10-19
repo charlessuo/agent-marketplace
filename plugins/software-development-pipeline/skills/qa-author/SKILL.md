@@ -19,6 +19,11 @@ columns an import file needs, the config keys, the input formats. Read them wher
 (the schema or migrations, the documented formats, another test's working fixture) before writing
 the setup, never guess them. A test that fails on its own setup has measured nothing.
 
+**What stands in for another system is built from a real sample of it.** A page, an API response or
+a file your test serves in place of a third party starts from a real capture, trimmed or varied for
+the case, never from what it probably looks like. Invented markup tests only that the product agrees
+with whoever invented it. With no capture to start from, say so.
+
 ## Tests that stay valid
 
 Tests that live alongside every other change's tests, and re-run after each one, must be:

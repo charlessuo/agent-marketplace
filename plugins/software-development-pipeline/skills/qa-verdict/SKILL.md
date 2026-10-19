@@ -52,6 +52,10 @@ user does and sees.
 Your words are someone's whole next assignment. For each finding: the criterion, the test, what was
 expected, and what happened. A verdict of "tests failed" costs a full round.
 
+**A finding that sends work back quotes the criterion's words it breaks.** If you can't quote
+them, it is a note. An input outside a list the requirement calls complete, or a demand for what it
+puts out of scope, is a note too.
+
 ## One pass, then converge
 
 - **Your first verdict reports every finding at once,** blocking and not. A finding held back for a
