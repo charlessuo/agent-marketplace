@@ -27,7 +27,12 @@ Report each break of a documented standard, citing the rule, and each baseline s
 - **A documented standard can be a hard violation.** A smell is always a judgement call.
 - **The project overrides the baseline:** where the standards or a decision endorse what a smell
   would flag, drop the smell.
-- **Skip what tooling or the tests already enforce.**
+- **Skip what tooling or the tests already enforce.** A change that switches the tooling off is
+  another matter. A new lint suppression or a raised threshold for a complexity rule, anywhere in
+  the change, is a hard violation: the standard is that the linter measures it.
+- **One concept, one name.** A variable, collection or structure that holds two terms the glossary
+  keeps apart is a finding. It blocks when the merge causes behaviour the criteria forbid;
+  otherwise it is a note.
 
 **Smell baseline**, each *what it is* → *fix*:
 - **Mysterious Name** → rename.
