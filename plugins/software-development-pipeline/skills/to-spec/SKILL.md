@@ -14,8 +14,8 @@ Your brief defines the exact shape of what you hand over. This skill is how to f
 
 ## Know the current state
 
-Read the project's existing spec, its decision records, and its domain glossary if it has one,
-before proposing anything. Use the project's vocabulary. A recorded decision stands unless the
+Read the project's existing spec, its decision records, and its glossary before proposing
+anything. Use the project's vocabulary. A recorded decision stands unless the
 person deliberately changes it.
 
 **Leave recorded decisions to the person.** Supersede a decision record only when they asked for
@@ -39,6 +39,10 @@ Revise an existing spec rather than replacing it. Sections:
 - **Solution:** from the user's perspective.
 - **User Stories:** a long, numbered list covering everything, each "As an <actor>, I want
   <feature>, so that <benefit>". Numbers stay stable across revisions.
+- **Glossary:** list every domain term, one line each. Map a term that names stored data to the
+  exact table and column(s), or API field(s), that hold it. Never give two terms the same
+  definition. If they share one, merge them or sharpen the definition. Add a term when the work
+  introduces one, and keep the old ones.
 - **Testing Decisions:** the agreed seams, what a good test is here (external behaviour only), and
   prior art.
 - **Decisions:** a one-line index. Each decision also gets its own record: its context, the
@@ -56,6 +60,8 @@ encodes a decision more precisely than prose; trim it and say where it came from
 - **Each item says how you'd know it works, from the outside,** and names the stories it covers.
 - **Each item is independently implementable and testable.** Two changes that must land together
   are one item; small beats large.
+- **Use the glossary's terms in every item.** Add a new term to the glossary first, then use it in
+  the item.
 - **Every term a criterion depends on is defined,** in observable terms: what a word like
   "eligible", "complete" or "last successful state" means as something a user can see. An
   undefined term is read two ways by the implementer and the tester, and each round flips between
