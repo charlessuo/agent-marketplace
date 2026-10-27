@@ -35,9 +35,9 @@ hermes plugins enable software-development-pipeline
 
 - `to-spec` — turn requirements into a spec, decision records, and work items.
 - `tdd` — implement one behavior-focused vertical slice at a time.
-- `code-review` — review changes against project standards and the spec.
+- `code-review` — review changes against project standards and the spec, then look for behaviour no test protects and claims the diff does not bear out.
 - `triage` — verify each review finding before anyone acts on it: one verdict and one route per finding, every finding logged.
-- `qa-author` — write black-box acceptance tests from criteria.
+- `qa-author` — write black-box acceptance tests from criteria, each tagged with the criteria it covers.
 - `qa-verdict` — assess a test run and report its QA verdict.
 - `distribute-work` — select and assign the next ready item of work.
 - `system-design` — coach system-design thinking like an interviewer while scoping a real system: a checklist framework, blind-spot questions, and a senior-level grading rubric.

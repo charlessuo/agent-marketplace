@@ -36,7 +36,11 @@ Name which, and why.
 
 Coverage is enough when **each criterion has a test that drives its observable behaviour**: what a
 user does and sees.
-- **A criterion with no such test** is a send-back to the test author. Name the criterion.
+- **Which test is tagged for which criterion may be measured for you.** When it is, take it as
+  settled and judge what no count can: does each tagged test really drive the criterion it names?
+  A tag on a test that never exercises its criterion leaves that criterion untested.
+- **A criterion with no such test** is a send-back to the test author. Name the criterion, and the
+  tagged test that fails to drive it.
 - **Wanting a criterion tested more deeply, or with more cases, is a note** once the suite passes,
   never a send-back. A bar that rises after green has no end.
 
