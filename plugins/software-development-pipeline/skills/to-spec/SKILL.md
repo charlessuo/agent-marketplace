@@ -58,6 +58,10 @@ encodes a decision more precisely than prose; trim it and say where it came from
 - **Vertical slices:** each item delivers something a user can observe, end to end. Not layer by
   layer.
 - **Each item says how you'd know it works, from the outside,** and names the stories it covers.
+- **Number each item's acceptance criteria** under a heading that reads `Acceptance criteria`:
+  `1.`, `2.`, `3.` … from 1, no gaps, each criterion starting its own line at the left margin. A
+  criterion's cases go in a list indented beneath it. Tests and findings name a criterion by its
+  number, so one number is one criterion.
 - **Each item is independently implementable and testable.** Two changes that must land together
   are one item; small beats large.
 - **Use the glossary's terms in every item.** Add a new term to the glossary first, then use it in

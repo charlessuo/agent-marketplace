@@ -1,12 +1,16 @@
 ---
 name: qa-author
-description: "Write black-box acceptance tests from a change's criteria, without reading its implementation: map every criterion to a test, find the interface without learning its behaviour, keep tests valid as the product grows, and keep the test environment declared. Use when writing end-to-end or acceptance tests."
+description: "Write black-box acceptance tests from a change's criteria, without reading its implementation: map every criterion to a test and tag each test with the criteria it covers, find the interface without learning its behaviour, keep tests valid as the product grows, and keep the test environment declared. Use when writing end-to-end or acceptance tests."
 ---
 
 ## Every criterion becomes a test
 
-- **At least one test per acceptance criterion,** named after it, citing the criterion in the test.
-  A reader should see at a glance that every criterion is covered.
+- **At least one test per acceptance criterion.**
+- **Tag each test with the numbers of the criteria it drives,** in the marker your brief gives, on
+  the test itself: in its title or a comment beside it. A tag is what lets anyone, or anything,
+  read the coverage without reading the tests. Every criterion carries at least one tag, and no tag
+  names a criterion the change does not have.
+- **Tag only what the test drives.** A test that sets up criterion 2 to check criterion 3 covers 3.
 - **Cover the edges a criterion names.** Don't invent requirements it doesn't state.
 
 ## Find the interface, not the behaviour
