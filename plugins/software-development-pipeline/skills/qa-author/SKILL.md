@@ -12,6 +12,8 @@ description: "Write black-box acceptance tests from a change's criteria, without
   names a criterion the change does not have.
 - **Tag only what the test drives.** A test that sets up criterion 2 to check criterion 3 covers 3.
 - **Cover the edges a criterion names.** Don't invent requirements it doesn't state.
+- **Never skip a criterion the outside can't reach,** such as a crash mid-request. Drive it
+  through the test hooks the project provides for that.
 
 ## Find the interface, not the behaviour
 
