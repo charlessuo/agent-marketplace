@@ -60,6 +60,10 @@ reader needs to act on it or check it.
   as", "boasts" or "features". Drop AI vocabulary: crucial, delve, enhance, robust, seamless,
   pivotal, landscape, showcase, underscore.
 - **Active voice; name the actor.** "The loader rejects the file", not "the file is rejected".
+- **Use the verb, not a noun made from it.** Watch for -ization, -ation, -ion and -ment.
+  "Validation of the plan resulted in the refusal of item 3" becomes "The engine refused item 3:
+  its body has no criteria". "Performed an investigation of the failure" becomes "investigated
+  the failure", or better, what you found.
 - **One idea per sentence.** If the reader has to backtrack to parse a sentence, split it.
 - **Say what it does, not how it feels.** "a column rename fails the build", not "keeps the
   schema safe". If a sentence can't be restated as a fact, an instruction or a number, cut it.
