@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "productivity",
-  "version": "0.3.0",
-  "description": "Skills for focused communication, editing, and collaborative decision-making. Includes i-have-adhd, unslop, and grilling.",
+  "version": "0.4.0",
+  "description": "Skills for focused communication, editing, reporting, and collaborative decision-making. Includes i-have-adhd, unslop, plain-report, and grilling.",
   "author": {
     "name": "Chao Suo",
     "email": "charlessuo@gmail.com"
