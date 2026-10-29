@@ -34,7 +34,8 @@ Sketch where the work will be tested:
 
 ## The spec
 
-Revise an existing spec rather than replacing it. Sections:
+Revise an existing spec rather than replacing it: keep what still holds, and never drop a part
+only because nobody mentioned it this time. Sections:
 - **Problem Statement:** from the user's perspective.
 - **Solution:** from the user's perspective.
 - **User Stories:** a long, numbered list covering everything, each "As an <actor>, I want
