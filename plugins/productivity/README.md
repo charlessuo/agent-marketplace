@@ -1,6 +1,6 @@
 # productivity
 
-Focused communication, editing, and collaborative decision-making skills for Claude Code, Codex, and Hermes.
+Focused communication, editing, reporting, and collaborative decision-making skills for Claude Code, Codex, and Hermes.
 
 ## Install
 
@@ -43,6 +43,14 @@ Removes AI tells from writing. It covers 31 patterns across content, language,
 style, filler, and jargon, then asks for a self-audit pass. The description is
 marked "must always apply", so Claude loads it for any writing or editing task
 rather than waiting to be asked.
+
+### plain-report
+
+Shapes anything another reader acts on (a hand-over, findings, a verdict, a
+summary, PR text, a notice): outcome first, facts over narrative, one finding
+per line, nothing the reader can't use. It carries unslop's sentence-level
+rules that matter for a report, without unslop's "Adding soul": a report has no
+voice to add. Claude loads it for any report or hand-over it writes.
 
 ### grilling
 

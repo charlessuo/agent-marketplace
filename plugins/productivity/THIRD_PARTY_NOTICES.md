@@ -21,3 +21,9 @@ https://github.com/cursor/plugins/tree/main/pstack/skills/unslop and is licensed
 under the MIT License. The local copy differs from the current upstream version;
 its local baseline and observed upstream commit are recorded in
 `../../skill-sources.json`. License text: `licenses/cursor-unslop-MIT.txt`.
+
+## plain-report
+
+The "Plain sentences" section adapts reporting-relevant rules from the unslop
+skill above (Copyright (c) 2026 Lauren Tan, MIT License). License text:
+`licenses/cursor-unslop-MIT.txt`.
