@@ -41,6 +41,7 @@ Codex reads the existing Claude-compatible marketplace and loads the same
 | --- | --- | --- |
 | `productivity` | 0.3.0 | Focused communication and editing, including `i-have-adhd`, `unslop`, and upstream `grilling`. |
 | `software-development-pipeline` | 0.1.0 | Workflows for specs, TDD, code review, acceptance testing, QA verdicts, and work distribution. |
+| `herdr` | 0.1.0 | Orchestrates Codex workers and reviewers in Herdr panes, one branch and worktree per task, through PR and CI to your review. Install it only where the orchestrator runs. |
 
 ## Layout
 

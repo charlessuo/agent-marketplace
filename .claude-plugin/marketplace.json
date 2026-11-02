@@ -46,6 +46,25 @@
         "quality-assurance",
         "work-distribution"
       ]
+    },
+    {
+      "name": "herdr",
+      "displayName": "Herdr",
+      "description": "Orchestrate Codex workers and reviewers in Herdr panes: one branch and worktree per task, review loops, and PRs carried through CI to your review.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Chao Suo",
+        "email": "charlessuo@gmail.com"
+      },
+      "source": "./plugins/herdr",
+      "category": "development",
+      "keywords": [
+        "herdr",
+        "orchestration",
+        "codex",
+        "multi-agent",
+        "git-worktree"
+      ]
     }
   ]
 }
